@@ -1,0 +1,44 @@
+{
+  "name": "street-fighter",
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "type": "module",
+  "version": "1.0.0",
+  "description": "1. **`npm run setup`** at the root\r 2. **`npm run dev`** at the root\r 3. open **`http://localhost:7500/`**",
+  "main": "npm 1 -D @babel/core babel/cliindex.js",
+  "scripts": {
+    "build": "babel index.js -d dist"
+  },
+  "author": "Binary Devs",
+  "license": "ISC",
+  "devDependencies": {
+    "commitlint": "^17.6.5",
+    "eslint": "^8.42.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "simple-git-hooks": "^2.8.1",
+    "vite": "^4.3.9"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit $1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BinaryStudioAcademy/lecture-starter-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BinaryStudioAcademy/lecture-starter-js/issues"
+  },
+  "homepage": "https://github.com/BinaryStudioAcademy/lecture-starter-js#readme"
+}
